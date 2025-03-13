@@ -1,0 +1,167 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 3vmax; 
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
+  padding: 1vmax;
+  display: flex;
+  border-bottom: 1px solid var(--black);
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  width: 10vmax;
+  height: 5vmax;
+  /* border-radius: 50%; */
+}
+
+.logo-text {
+  font-size: 2vmax;
+  color: var(--gray);
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.language-toggle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.language-toggle {
+  position: relative;
+  width: 4vmax;
+  height: 2.5vmax;
+  background: var(--glass);
+  border-radius: 1vmax;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8vmax;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-toggle .toggle-option {
+  font-size: 1.2vmax;
+  color: rgb(167, 126, 132);
+  font-weight: bold;
+  z-index: 2;
+}
+
+.toggle-slider {
+  position: absolute;
+  width: 2.5vmax;
+  height: 2.1vmax;
+  background-color: var(--black);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  transform: translateX(-0.4vmax);
+}
+
+.language-toggle.urdu .toggle-slider {
+  transform: translateX(2.1vmax);
+}
+
+/* User Actions */
+.navbar-user-actions {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  color: var(--black);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.6vmax;
+  font-weight: bold;
+}
+
+.dropdown-toggle .user-icon {
+  font-size: 2vmax;
+  margin-right: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 3.5vmax;
+  right: 0;
+  background: var(--glass);
+  border-radius: 5px;
+  box-shadow: var(--boxShadow);
+  list-style: none;
+  padding: 10px;
+  min-width: 10vmax;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+  padding: 10px;
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.4vmax;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-item svg {
+  margin-right: 10px;
+}
+
+.dropdown-item:hover {
+  background: var(--pink);
+  border-radius: 3px;
+  color: white;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 6vmax;
+    padding: 0 1vmax;
+  }
+
+  .logo-text {
+    font-size: 1.5vmax;
+  }
+
+  .navbar-user-actions {
+    gap: 1vmax;
+  }
+
+  .dropdown-toggle {
+    font-size: 1.2vmax;
+  }
+}

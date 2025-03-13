@@ -1,0 +1,165 @@
+.home-container {
+  display: grid;
+  grid-template-areas:
+    /* "header notifications"  */
+    "transactions notifications" 
+    "options notifications";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--light), var(--gold));
+  min-height: 87vh;
+  position: relative;
+}
+
+.home-header {
+  grid-area: header;
+  text-align: center;
+}
+
+.home-header h1 {
+  font-size: 2rem;
+  color: var(--dark);
+  text-shadow: 0 2px 5px var(--gold);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.home-header p {
+  font-size: 1rem;
+  color: var(--highlight);
+  margin-top: 0.5rem;
+  animation: fadeIn 2s ease-in-out 1s;
+}
+
+.transaction-summary {
+  grid-area: transactions;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background: linear-gradient(180deg, #FF919D 0%, #FC929D 100%);
+  box-shadow: 0px 10px 20px 0px #FDC0C7;
+  /* padding: 10px; */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.summary-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.home-options {
+  grid-area: options;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 10px; */
+  gap: 1.5rem;
+}
+
+.home-option {
+  text-decoration: none;
+}
+
+.option-box {
+  background: var(--dark);
+  color: var(--gold);
+  font-size: 1.2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.option-box:hover {
+  transform: scale(1.05);
+  background: var(--gold);
+  color: var(--dark);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-notifications {
+  grid-area: notifications;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.notifications-container {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-height: 31vh;
+  min-height: 175px;
+  overflow: hidden; /* Hide overflow on the container itself */
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-container h2 {
+  /* margin-bottom: 1rem; */
+  font-size: 1rem;
+  color: var(--dark);
+  /* position: sticky;  */
+  top: 0;
+  background: var(--light);
+  /* z-index: 1;  */
+}
+
+.notification-list {
+  overflow-y: auto; /* Scrollable area */
+  flex-grow: 1;
+  padding-right: 1rem; /* Add padding to the right for scrollbar space */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification-list p{
+  
+  padding: 1rem;
+  text-align: center;
+  background: #9a8e64;
+  color: #b00909;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.notification {
+  padding: 1rem;
+  background: var(--gold);
+  color: var(--dark);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .home-container {
+    grid-template-areas:
+      "options"
+      "notifications";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .notifications-container {
+    max-height: none;
+  }
+}

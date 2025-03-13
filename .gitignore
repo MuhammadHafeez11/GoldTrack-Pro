@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+FrontEnd/node_modules/
+BackEnd/node_modules/
+
+# Environment Variables
+.env
+BackEnd/.env
+FrontEnd/.env
+
+# Build Files
+FrontEnd/dist/
+BackEnd/build/
+
+
+# Ignore logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore build files
+dist/
+build/
+
+# Ignore uploaded files
+backend/Uploads/
+
+# Ignore editor/system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

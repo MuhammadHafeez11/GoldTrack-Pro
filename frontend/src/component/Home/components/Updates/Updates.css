@@ -1,0 +1,46 @@
+.Updates {
+    width: 85%;
+    background: white;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    gap: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    max-height: 27vmax; /* Limit height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .update {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    background: white;
+    border-bottom: 1px solid #f0f0f0; /* Separate updates visually */
+  }
+  
+  .update:last-of-type {
+    border-bottom: none; /* Remove bottom border for the last item */
+  }
+  
+  .update > img {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover;
+  }
+  
+  .noti > div > span:nth-of-type(1) {
+    font-weight: normal;
+  }
+  
+  .Updates::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  .Updates::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 0.3rem;
+  }
+  

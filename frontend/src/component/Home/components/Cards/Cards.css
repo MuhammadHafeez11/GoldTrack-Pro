@@ -1,0 +1,97 @@
+.Cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new lines */
+  gap: 10px;
+  justify-content: flex-start; /* Adjust as needed (center/space-between) */
+}
+
+.parentContainer {
+  width: calc(33.33% - 10px); /* Account for gap spacing */
+  /* 33.33% for 3 columns, subtract 10px to account for gap */
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+/* Add to Cards.css */
+.time-range-selector {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.DateInput_input {
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 24px;
+  color: #484848;
+  background-color: navajowhite;
+  width: 85%;
+  padding: 11px 11px 9px;
+  /* border: 0;
+  border-top: 0;
+  border-right: 0;r
+  border-bottom: 2px solid transparent;
+  border-left: 0;
+  border-radius: 0; */
+}
+
+.time-range-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.time-range-selector select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .parentContainer {
+    width: calc(50% - 10px); /* 2 columns on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Cards {
+    width: 95%;
+    margin: 10px;
+  }
+  .parentContainer {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Remove fixed height */
+    margin-bottom: 10px;
+  } .time-range-selector {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* Override the container styles for the date picker inputs */
+  /* .DateRangePicker,
+  .DateRangePickerInput,
+  .SingleDatePickerInput {
+    margin: 4px;
+    width: 93% !important;
+    font-size: 5px;
+  } */
+
+  /* Adjust the input field styles */
+  .DateInput_input {
+    width: 87% ;
+    padding: 9px ;
+    font-size: 15px !important;
+  }
+
+  /* Adjust the calendar popup so it fits within the mobile screen */
+  .DateRangePicker_picker {
+    width: 90% !important;
+    /* left: 50% !important; */
+    /* transform: translateX(-50%) !important; */
+  }
+
+  /* Optionally adjust individual day cells if needed */
+  .CalendarDay {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+}

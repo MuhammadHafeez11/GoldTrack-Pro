@@ -1,0 +1,160 @@
+.custom-table-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  /* min-width: 600px; */
+}
+
+.custom-table-wrapper {
+  width: 100%;
+  max-height: 290px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #b3b3b3 #e0e0e0; /* Firefox */
+}
+
+/* Custom Scrollbar for Webkit browsers */
+.custom-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 8px;
+}
+
+.custom-table-wrapper::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-table th {
+  background-color: #f7f9fc;
+  color: #4a5568;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: sticky; /* Sticky header */
+  top: 0;
+  /* z-index: 1; */
+}
+
+.custom-table th:hover {
+  background-color: #e2e8f0;
+}
+
+.custom-table td {
+  color: #4a5568;
+}
+
+.custom-table tr:hover td {
+  background-color: #edf2f7;
+}
+
+.pagination-controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.pagination-controls button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #0073e6;
+}
+
+.pagination-controls button[disabled] {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+
+.pagination-controls input {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pagination-controls select {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Responsive font and padding adjustments */
+@media (max-width: 768px) {
+  .custom-table-container {
+    width: 100%;
+    padding: -1px 10px;
+  }
+  
+  /* Force a min-width for the table if needed so that horizontal scrolling kicks in */
+  .custom-table {
+    width: 100%;
+    max-width: 390px;
+    overflow: auto;
+  }
+  
+  .custom-table-wrapper {
+    width: 100%;
+    max-width: 345px;
+    max-height: 420px; /* Adjust vertical height on mobile */
+    overflow: auto;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  .pagination-controls{
+    font-size: 10px;
+  }
+  
+  .pagination-controls button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .pagination-controls input {
+    width: 40px;
+  }
+  
+  .pagination-controls select {
+    font-size: 12px;
+    padding: 4px;
+  }
+}

@@ -1,0 +1,58 @@
+.filtered-records-page {
+    padding: 2vmax;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vmax;
+  }
+  
+  .back-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+/*   
+  h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+  } */
+
+
+.icons {
+    display: flex;
+    gap: 1vmax;
+  }
+  
+  .icons {
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .icons:hover {
+    color: #0056b3;
+  }
+  
+  /* Print-specific styles */
+  @media print {
+    .header,
+    .icons {
+      display: none;
+    }
+  
+    .filtered-records-page {
+      padding: 0;
+    }
+  
+    .printable-area {
+      display: block;
+    }
+    .navbar {
+        display: none;
+      }
+  }

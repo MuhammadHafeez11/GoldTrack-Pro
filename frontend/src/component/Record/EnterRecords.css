@@ -1,0 +1,218 @@
+.record-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 985px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 455px;
+  color: #333;
+}
+
+.search-container {
+  margin-bottom: 5px;
+}
+
+.Glass {
+  display: grid;
+  height: 97%;
+  width: 97%;
+  background: linear-gradient(135deg, var(--light), var(--gold));
+  /* background-color: var(--light); */
+  border-radius: 2rem;
+  gap: 16px;
+  grid-template-columns: 11rem auto;
+  overflow: hidden;
+}
+
+.search-container h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.search-fields {
+  display: flex;
+  justify-content: space-around;
+  height: 3.5rem;
+  /* padding: 10px; */
+  /* border: 1px solid black; */
+  /* background-color: #d4c677 ;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-fields .DateInput_input{
+  width: 95%;
+}
+
+.search-fields input,
+.search-fields select,
+.date-picker-toggle {
+  flex: 1; /* Ensures all inputs and buttons take equal width */
+  padding: 3px; /* Uniform padding */
+  font-size: 16px; /* Same font size */
+  border: 1px solid #864949;
+  border-radius: 1px;
+  background-color: navajowhite;
+  text-align: left;
+  /* background: none; */
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  cursor: pointer;
+}
+
+  
+.search-fields ::placeholder{
+  color: black;
+}
+
+.date-picker-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+
+.date-picker-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.DateInput{
+  background: none;
+}
+.DateRangePickerInput {
+  background-color: navajowhite;
+}
+
+.print-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 3px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  text-align: center;
+  display: inline-block;
+  margin-top: -10px;
+}
+
+.date-picker-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.date-picker-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 600px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.no-data {
+  text-align: center;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+
+  .Glass{
+    grid-template-columns: auto;
+    height: 90vh;
+    /* overflow: auto; */
+    }
+  .record-container {
+    padding: 15px;
+    max-width: 335px;
+    margin: 10px;
+  
+
+  
+
+  .title {
+    font-size: 20px;
+  }
+/* 
+  .search-fields {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+  } */
+
+  .search-fields{
+    gap: 4px;
+  }
+
+  .search-fields input,
+  .search-fields select {
+    background-color: navajowhite;
+    font-size: 14px;
+    padding: 3px;
+  }
+
+  
+.search-fields ::placeholder{
+  color: black;
+}
+
+.print-button{
+  margin-top: 35px;
+  font-size: 15px;
+}
+
+.DateRangePicker,
+.DateRangePickerInput{
+  margin: 0px;
+  width: 100%;
+}
+  .DateRangePickerInput {
+    background-color: navajowhite;
+  }
+
+  .DateRangePickerInput_arrow_svg {
+    width: 65px;
+  }
+    .DateInput_input{
+    width: 102%;
+    padding: 4px;
+    }
+
+/* 
+  .DateInput_input{
+    font-size: 8px;
+  } */
+
+  .date-picker-content {
+    max-width: 90%;
+  }
+}
+}

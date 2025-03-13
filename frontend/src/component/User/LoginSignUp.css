@@ -1,0 +1,489 @@
+:root {
+  --sws-yellow: linear-gradient(180deg, #f8d49a -146.42%, #fad79d -46.42%);
+  --sws-orange: #fca61f;
+  --sws-black: #242d49;
+  --sws-gray: #788097;
+  --sws-purple: linear-gradient(180deg, #bb67ff 0%, #c484f3 100%);
+  --sws-pink: #ff919d;
+  --sws-glass: rgba(255, 255, 255, 0.54);
+  --sws-boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --sws-smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --sws-activeItem: #f799a354;
+}
+
+.sws_auth_container {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85%);
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.sws_auth_glassBox {
+  background: var(--sws-glass);
+  border-radius: 2rem;
+  backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--sws-boxShadow);
+  padding: 1.5rem;
+  width: 96%;
+  max-width: 420px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.sws_auth_content {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--sws-smboxShadow);
+}
+
+.sws_auth_header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sws_auth_logo {
+  font-size: 3rem !important;
+  color: var(--sws-orange);
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sws_auth_title {
+  color: var(--sws-black);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sws_auth_subtitle {
+  color: var(--sws-gray);
+  font-size: 0.9rem;
+}
+
+.sws_auth_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sws_auth_inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sws_auth_inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sws_auth_inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--sws-gray);
+  transition: color 0.3s ease;
+}
+
+.sws_auth_input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--sws-black);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.sws_auth_input:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 2px var(--sws-orange);
+}
+
+.sws_auth_input:focus + .sws_auth_inputIcon {
+  color: var(--sws-orange);
+}
+
+.sws_auth_inputBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* background: var(--sws-orange); */
+  transition: width 0.3s ease;
+}
+
+.sws_auth_input:focus ~ .sws_auth_inputBorder {
+  width: 100%;
+}
+
+.sws_auth_button {
+  position: relative;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: var(--sws-orange);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sws_auth_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(252, 166, 31, 0.4);
+}
+
+.sws_auth_button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.sws_auth_buttonGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: rotate(45deg);
+  animation: glow 3s linear infinite;
+  pointer-events: none;
+}
+
+.sws_auth_footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.sws_auth_company {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--sws-smboxShadow);
+}
+
+.sws_auth_companyText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sws_auth_poweredBy {
+  font-size: 0.7rem;
+  color: var(--sws-gray);
+  margin-bottom: 0.3rem;
+}
+
+.sws_auth_companyLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sws_auth_logoImage {
+  height: 30px;
+  max-width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sws_auth_logoImage:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sws_auth_container {
+    min-height: 95vh;
+  }
+  .sws_auth_glassBox {
+    padding: 0.5rem;
+  }
+
+  .sws_auth_content {
+    padding: 1.5rem;
+  }
+
+  .sws_auth_title {
+    font-size: 1.5rem;
+  }
+
+  .sws_auth_subtitle {
+    font-size: 0.8rem;
+  }
+
+  .sws_auth_input {
+    padding: 0.7rem 1rem 0.7rem 2.8rem;
+  }
+
+  .sws_auth_logoImage {
+    height: 26px;
+    max-width: 100px;
+  }
+}
+
+/* .LoginSignUpContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(231, 231, 231);
+  position: fixed;
+  top: 0%;
+  left: 0;
+}
+
+.LoginSignUpBox {
+  background-color: white;
+  width: 25vw;
+  height: 70vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.login_signUp_toggle {
+  display: flex;
+  height: 3vmax;
+}
+
+.login_signUp_toggle>p {
+  color: rgba(0, 0, 0, 0.678);
+  font: 300 1vmax "Roboto";
+  transition: all 0.5s;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.login_signUp_toggle>p:hover {
+  color: tomato;
+}
+
+.LoginSignUpBox>div>button {
+  background-color: tomato;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+
+.loginForm,
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.signUpForm {
+  transform: translateY(-100%) translateX(-100vmax);
+}
+
+.loginForm>div,
+.signUpForm>div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.loginForm>div>input,
+.signUpForm>div>input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+}
+
+.loginForm>div>svg,
+.signUpForm>div>svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.loginForm>a {
+  color: rgba(0, 0, 0, 0.651);
+  text-decoration: none;
+  align-self: flex-end;
+  transition: all 0.5s;
+  font: 500 0.8vmax "Gill Sans";
+}
+
+.loginForm>a:hover {
+  color: black;
+}
+
+#registerImage>img {
+  width: 3vmax;
+  border-radius: 100%;
+}
+
+#registerImage>input {
+  display: flex;
+  padding: 0%;
+}
+
+#registerImage>input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+
+#registerImage>input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.loginBtn,
+.signUpBtn {
+  border: none;
+  background-color: tomato;
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.loginBtn:hover,
+.signUpBtn:hover {
+  background-color: rgb(179, 66, 46);
+}
+
+.shiftToLeft {
+  transform: translateX(-100%);
+}
+
+.shiftToNeutral {
+  transform: translateX(0%);
+}
+
+.shiftToNeutralForm {
+  transform: translateX(0%) translateY(-100%);
+}
+
+.shiftToRight {
+  transform: translateX(100%);
+}
+
+@media screen and (max-width: 600px) {
+  .LoginSignUpContainer {
+    background-color: white;
+  }
+
+  .LoginSignUpBox {
+    width: 100vw;
+    height: 95vh;
+  }
+
+  .login_signUp_toggle {
+    height: 5vmax;
+  }
+
+  .login_signUp_toggle>p {
+    font: 300 1.5vmax "Roboto";
+  }
+
+  .loginForm,
+  .signUpForm {
+    padding: 5vmax;
+  }
+
+  .loginForm>div>input,
+  .signUpForm>div>input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .loginForm>div>svg,
+  .signUpForm>div>svg {
+    font-size: 2.8vmax;
+  }
+
+  .loginForm>a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+  #registerImage>img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #registerImage>input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+  }
+
+  .loginBtn,
+  .signUpBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+} */
